@@ -1,0 +1,21 @@
+
+@import "components/lightbox";
+
+
+body {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+}
+
+.media-icon { 
+    font-size: 2em; 
+    margin-right: 18px; 
+    border: 8px solid rgba(0, 128, 0, 0.25);
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    background-color: green;
+}
+
+.media-icon ~ h1 { display: inline-block; }
