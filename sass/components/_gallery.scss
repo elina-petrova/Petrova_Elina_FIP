@@ -1,0 +1,36 @@
+#gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+
+    margin: 0;
+    padding: 0;
+
+    h2{
+        letter-spacing: 5px;
+        align-self: left;
+        font-size: 50px;
+        text-transform: lowercase;
+        margin: 10%;
+    }
+}
+.button-parent{
+    display: flex;
+    flex-direction: column;
+
+    img{
+        width: 200px;
+    }
+    
+    .lb-thumb-title{
+        text-transform: uppercase;
+    }
+}
+
+.lb-thumb:hover {
+    transform: scale(0.9);
+    transition: all 0.4s;
+    cursor: pointer;
+}
