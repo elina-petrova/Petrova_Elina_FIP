@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrova Elina</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+
+    <main id="app">
+
+        <section id="homeSection">
+            <nav>
+                <div class="logo">
+                    <img src="images/portfolio-logo.svg">
+                </div>
+            </nav>
+
+            <div class="aboutMe">
+             <p>Hi! You are visiting the website of an aspiring web-developer.My name is Petrova Elina and I am a Fanshawe student.
+                    Here you can found out all the information about my recent
+                    projects. <br>
+                Find me on GitHub: <a href="https://github.com/elina-petrova"> https://github.com/elina-petrova </a></a> </p>
+
+                    <ul>
+                        <li><a href="#gallery">━ portfolio ━</a></li>
+                        <li><a href="#contact_form">━ contact ━</a></li>
+                    </ul>
+            
+            </div>
+        </section>
+
+        
+            <video id="demoReel" src="video/demoReel.mp4" autoplay controls></video>
+        
+
+        <section id="gallery">
+            <h2>MY PROJECTS</h2>
+        <div class="button-parent">
+        <buttoncomponent v-for="item in mediaCollection" :item="item" :key='item.id' @setmediatype="setComponent"></buttoncomponent>
+        </div>
+        <lightbox :item="currentItem" :type="type"></lightbox>
+        </section>
+
+        <section id="contact_form">
+            <h2>connect with me</h2>
+            <form action="./includes/mail/send.php" method="POST" id="mail-form">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="first name">
+                <span class="error name-error"></span>
+    
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="last name">
+                <span class="error last_name-error"></span>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email"> 
+                <span class="error email-error"></span>
+    
+                <label for="inquery">Type of Inquery</label>
+                 <select name="inquery" id="inquery">
+                    <option value="General" class="option">General</option>
+                    <option value="Business" class="option">Business</option>
+                    <option value="Question" class="option">Question</option>
+                    <option value="Other" class="option">Other</option>
+                  </select>
+    
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    
+                <button class="submit-wrapper g-recaptcha" 
+                data-sitekey="6LcApvEZAAAAABeRT9Y7oMreoqE6hfY8e68byYHt" 
+                data-callback='onSubmit' 
+                data-action='submit'>
+                    <span class="submit">Submit</span>
+                </button>
+            </form>
+        </section>
+
+        <section id="footer">
+            <p>2020 <br> All right reserved.</p>
+        </section>
+
+    </main> 
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src='js/main.js' type='module'></script>
+</body>
+
+</html>
