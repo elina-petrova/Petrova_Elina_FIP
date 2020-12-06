@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    src: url("fonts/CONSOLA.TTF") format("ttf");
+
+    font-family: "Consola";
+    font-weight: 100;
+}
+
+@font-face {
+    src: url("fonts/Bahnschrift.TTF") format("ttf");
+
+    font-family: "Bahnschrift";
+    font-weight: 100;
+}
+
+body {
+    background: #333;
+    font-family: 'Bahnschrift';
+    scroll-behavior: smooth;
+}
+.button-parent{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    transition: .15s ease-out;
+}

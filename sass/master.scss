@@ -1,6 +1,12 @@
-
+@import "components/main";
+@import "components/nav";
+@import "components/audioPlayer";
+@import "components/videoPlayer";
 @import "components/lightbox";
-
+@import "components/gallery";
+@import "components/form";
+@import "components/footer";
+@import "components/mediaquery";
 
 body {
     font-size: 16px;
